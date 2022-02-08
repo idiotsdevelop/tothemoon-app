@@ -15,12 +15,10 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  List info=[];
-  _initData() {
-    DefaultAssetBundle.of(context).loadString("json/info.json").then((value) {
-      info = json.decode(value);
-    });
-  }
+
+  _initData() => {
+
+  };
 
   @override
   void initState(){
@@ -266,39 +264,6 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 height: 30,
               ),
-              Expanded(child: ListView.builder(
-                  itemCount: info.length, //2
-                  itemBuilder: (_ ,i) {
-                return Column(
-                  children: [
-                    Container(
-                      width : 200,
-                      height : 170,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        image: DecorationImage(
-                          image: AssetImage(
-                            info[i]['img']
-                          )
-                        ),
-
-                      ),
-                      child: Center(
-                        child: Align(
-                          alignment: Alignment.bottomCenter,
-                          child: Text(
-                            info[i]["title"],
-                            style : TextStyle(
-                              fontSize: 20,
-                              color:color.AppColor.homePageDetail,
-                            )
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                );
-              }))
             ],
           ),
         ));

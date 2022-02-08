@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:moon/details.dart';
+import 'package:moon/socket.dart';
+import 'package:moon/t_page.dart';
 import 'home_page.dart';
 
 
@@ -15,8 +17,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      home : HomePage(),
+      // debugShowCheckedModeBanner: false,
+      home : SocketPage(),
     );
   }
 }

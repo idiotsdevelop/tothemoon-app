@@ -1,12 +1,17 @@
+import 'package:flutter/material.dart';
+
 class Test {
   final String name;
   final int phoneNumber;
+
   // int? temp;
 
-  Test(this.phoneNumber, this.name);
+  Test({required this.name, required this.phoneNumber});
 
-  // factory Test.fromJson(Map<String, dynamic> json) {
-    // return Test(phoneNumber : json['phone_number'], name : ['name']);
-  // }
-
+  factory Test.fromJson(Map<String, dynamic> json) {
+    return Test(
+      name: json['name'],
+      phoneNumber: json['phone_number'],
+    );
+  }
 }
