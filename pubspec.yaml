@@ -37,6 +37,7 @@ dependencies:
   get:
   http:
   web_socket_channel: ^2.1.0
+  sprintf: ^6.0.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
